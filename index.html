@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+     <meta charset="UTF-8"/>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>JS Tables</title>
+
+
+     <style>
+         #id_orderItem{
+            margin-bottom : 20px;
+         }
+         body{
+             font-family: Arial, Helvetica, sans-serif;
+         }
+
+         #id_orderTable td{
+           min-width: 150px;
+           min-height: 10px;
+           margin-right: 10px;                      
+         }
+         #id_orderTable th{
+           min-width: 150px;
+           min-height: 10px; 
+         }
+        input{
+            width: 150px;
+         }
+         #id_orderTable tr,  #id_orderTable td{
+             border:1px solid black;
+         }
+     </style>
+
+
+</head>
+
+<body>  
+    
+    <h2>Заявка на поставку товаров</h2>
+
+    <table id="id_orderItem">
+        <thead>
+            <tr>
+                <th>Категория</th>
+                <th>Тип</th>
+                <th>Производитель</th>
+                <th>Модель</th>
+                <th>Количество</th>               
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+            <td>
+                <input type="text" name="newItemCategory"/>
+            </td>
+            <td>
+                <input type="text" name="newItemType"/>
+            </td>
+            <td>
+                <input type="text" name="newItemManuf"/>
+            </td>
+            <td>
+                <input type="text" name="newItemModel"/>
+            </td>
+            <td>
+                <input type="number" min="1" name="newItemQty" value="1"/>
+            </td>          
+        </tr>
+        <tr>
+            <td colspan="5">
+                <input type="button" name="addItemToOrder"value="Add To Order"/>
+            </td>
+        </tr>
+        </tbody>
+    </table>  
+
+
+        <table id="id_orderTable">
+            <thead>
+                <tr>
+                    <th>Категория</th>
+                    <th>Тип</th>
+                    <th>Производитель</th>
+                    <th>Модель</th>
+                    <th>Количество</th>
+                    <th>Действие</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>    
+
+        
+       
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="app.js"></script>
+    
+</body>
+</html>
